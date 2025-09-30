@@ -27,7 +27,7 @@
         <nav className="navbar">
         <div className="navbar-container">
             {/* Logo */}
-            <div className="logo">Darong</div>
+            <div className="logo">Darong Seang</div>
 
             {/* Nav Links inside a container bar */}
             <div className="links-bar">

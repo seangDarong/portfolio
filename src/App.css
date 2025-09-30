@@ -3,4 +3,43 @@ body {
     background-color: #1A1F25;
     color: white;
     font-family: 'Monda', sans-serif;
+    overflow-x: hidden;
+}
+/* Set background for the whole page */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
+
+main {
+  padding-top: 80px;  /* Height of navbar + some padding */
+  width: 100%;
+  min-height: 100vh;
+}
+
+section {
+  width: 100%;
+  min-height: 100vh;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Hide scrollbar but keep functionality */
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
 }
