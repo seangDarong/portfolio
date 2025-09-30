@@ -1,0 +1,6 @@
+/* Set background for the whole page */
+body {
+    background-color: #1A1F25;
+    color: white;
+    font-family: 'Monda', sans-serif;
+}
