@@ -10,6 +10,7 @@
 /* Inner container */
 .navbar-container {
   max-width: 1200px;
+  width: 100%;
   margin: 0 auto;
   padding: 20px;
   display: flex;
@@ -19,6 +20,7 @@
 
 /* Logo */
 .logo {
+  
   font-size: 24px;
   font-weight: bold;
   color: white;
@@ -29,14 +31,15 @@
 
 /* Links container - Liquid Glass */
 .links-bar {
+  position: sticky;
   height: 45px;
   background: linear-gradient(
-    135deg,
+    45deg,
     rgba(255, 255, 255, 0.01),
-    rgba(255, 255, 255, 0.01)
+    rgba(255, 255, 255, 0).01
   );
   backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(1.5px);
   border-radius: 14px;
   border: 0.1px solid rgba(255, 255, 255, 0.3);
   padding: 8px 24px;
@@ -78,6 +81,10 @@
   position: relative;
   text-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
   backdrop-filter: blur(6px);
+  color: white;
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+  font-family: 'Monda', sans-serif;
+  mix-blend-mode: lighten;
 }
 
 /* Active and hover effect */
@@ -94,7 +101,7 @@
   top: 50%;
   left: 0;
   transform: translateY(-50%);
-  height: 40px;
+  height: 45px;
   width: 100%;
   border-radius: 14px;
     border: 0.5px solid rgba(255, 255, 255, 0.2);
@@ -123,11 +130,12 @@
 
 /* Media Queries */
 @media screen and (max-width: 768px) {
-  .navbar-container {
-    padding: 15px;
-    flex-direction: column;
-    gap: 15px;
+  .about-container {
+    flex-direction: column-reverse;
+    text-align: center;
+    padding: 20px;
   }
+  
 
   .logo {
     font-size: 20px;

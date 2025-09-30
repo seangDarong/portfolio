@@ -8,16 +8,18 @@ align-items: center;
 
 .about-container {
 max-width: 1200px;
-margin: 0 auto;
+width: 100%;
+margin: 0  auto;
 padding: 0 20px;
 display: flex;
 justify-content: space-between;
 align-items: center;
-gap: 60px;
+gap: 100px; /* Increased gap between content and image */
 }
 
 .about-content {
 flex: 1;
+max-width: 600px; /* Added max-width for better text layout */
 }
 
 .name-header {
@@ -56,14 +58,15 @@ background: linear-gradient(
   -webkit-backdrop-filter: blur(20px);
   border-radius: 14px;
   border: 0.1px solid rgba(255, 255, 255, 0.3);
-  padding: 8px 24px;
+  padding: 12px 32px; /* Increased padding */
   display: flex;
   align-items: center;
   box-shadow: 
-    0 8px 30px rgba(0, 0, 0, 0.15),
-    inset 0 2px 4px rgba(255, 255, 255, 0.2),
-    inset 0 -2px 4px rgba(0,0,0,0.2);
-font-size: 1rem;
+    0 8px 32px rgba(0, 0, 0, 0.2),
+    inset 0 2px 4px rgba(255, 255, 255, 0.1);
+font-size: 1.1rem; /* Increased font size */
+font-weight: 500; /* Increased font weight */
+letter-spacing: 0.5px; /* Added letter spacing */
 cursor: pointer;
 transition: all 0.3s ease;
 }
@@ -81,23 +84,26 @@ border: 1px solid #ffffff;
 }
 
 .about-image {
-flex: 1;
-max-width: 500px;
+width: 450px; /* Increased width */
+height: 450px; /* Increased height */
 position: relative;
-padding: 12px;
-aspect-ratio: 4/3; /* Changed from 16/9 for less squeeze */
+padding: 0px;
 background: linear-gradient(
-    135deg,
-    rgba(255, 255, 255, 0.05),
-    rgba(255, 255, 255, 0.03)
+    45deg,
+    rgba(255, 255, 255, 0.01),
+    rgba(255, 255, 255, 0).01
   );
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border-radius: 24px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(1.5px);
+  border-radius: 14px;
+  border: 0.1px solid rgba(255, 255, 255, 0.3);
+  padding: 8px 24px;
+  display: flex;
+  align-items: center;
   box-shadow: 
-    0 8px 32px rgba(0, 0, 0, 0.2),
-    inset 0 2px 3px rgba(255, 255, 255, 0.06);
+    0 8px 30px rgba(0, 0, 0, 0.15),
+    inset 0 2px 4px rgba(255, 255, 255, 0.2),
+    inset 0 -2px 4px rgba(0,0,0,0.2);
 }
 
 .about-image::before {
@@ -107,8 +113,8 @@ top: 0;
 left: 0;
 right: 0;
 bottom: 0;
-border-radius: 24px;
-padding: 2px;
+border-radius: 14px;
+padding: 0px;
 background: linear-gradient(
     135deg,
     rgba(255, 255, 255, 0.1),
@@ -126,19 +132,30 @@ background: linear-gradient(
 }
 
 .about-image img {
-width: 100%;
-height: 100%;
-object-fit: contain; /* Changed from cover to prevent squeezing */
-border-radius: 16px;
+width: calc(100% - 30px); /* Adjusted to account for padding */
+height: calc(100% - 30px); /* Adjusted to account for padding */
+object-fit: cover; /* Changed to cover */
+border-radius: 14px;
 display: block;
 }
 
 /* Responsive Design */
+@media screen and (max-width: 1024px) {
+.about-container {
+    gap: 60px;
+  }
+  
+  .about-image {
+    width: 400px;
+    height: 400px;
+  }
+}
+
 @media screen and (max-width: 768px) {
 .about-container {
     flex-direction: column-reverse;
     text-align: center;
-    padding: 20px;
+    gap: 40px;
 }
 
 h1 {
@@ -154,6 +171,7 @@ h2 {
 }
 
 .about-image {
-    max-width: 300px;
+    width: 350px;
+    height: 350px;
 }
 }
