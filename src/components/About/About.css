@@ -87,23 +87,24 @@ border: 1px solid #ffffff;
 width: 450px; /* Increased width */
 height: 450px; /* Increased height */
 position: relative;
-padding: 0px;
 background: linear-gradient(
     45deg,
     rgba(255, 255, 255, 0.01),
-    rgba(255, 255, 255, 0).01
+    rgba(255, 255, 255, 0.01)
   );
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(1.5px);
-  border-radius: 14px;
+  border-radius: 50%;
   border: 0.1px solid rgba(255, 255, 255, 0.3);
-  padding: 8px 24px;
   display: flex;
   align-items: center;
+  justify-content: center; /* Added to center the image */
+  overflow: hidden; /* Added to clip the image to the circle */
   box-shadow: 
     0 8px 30px rgba(0, 0, 0, 0.15),
     inset 0 2px 4px rgba(255, 255, 255, 0.2),
     inset 0 -2px 4px rgba(0,0,0,0.2);
+  padding: 0; /* Remove padding */
 }
 
 .about-image::before {
@@ -132,10 +133,10 @@ background: linear-gradient(
 }
 
 .about-image img {
-width: calc(100% - 30px); /* Adjusted to account for padding */
-height: calc(100% - 30px); /* Adjusted to account for padding */
-object-fit: cover; /* Changed to cover */
-border-radius: 14px;
+width: 100%;
+height: 100%;
+object-fit: cover;
+border-radius: 50%; /* Match parent's border-radius */
 display: block;
 }
 
