@@ -1,13 +1,27 @@
     import React from 'react';
     import './Project.css';
-    import profile from '../../assets/profile.png';
+    import ProjectCard from '../Cards/projectCard.tsx'
+    import ProjectData from '../../project.json'
 
-    const About: React.FC = () => {
+    const Project: React.FC = () => {
     return (
-        <section id="about" className="about-section">
-        <div className='space'></div>
+        <section id="project" className="project-section">
+        <div className='project-container'>
+            <h1 className='project-header'>Project</h1>
+            <div className='project-card-container'>
+                {ProjectData.projects.map((project) => (
+                    <ProjectCard
+                    key={project.id}
+                    title={project.title}
+                    category={project.category}
+                    image={project.image}
+                    technologies={project.technologies}
+                    />
+                ))}
+            </div>
+        </div>
         </section>
     );
     };
 
-    export default About;
+    export default Project;

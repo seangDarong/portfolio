@@ -26,11 +26,12 @@ main {
 
 section {
   width: 100%;
-  min-height: 100vh;
   padding: 20px;
+  margin-bottom: 25px;
   display: flex;
   align-items: center;
   justify-content: center;
+  min-height: auto;
 }
 
 /* Smooth scrolling */

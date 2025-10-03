@@ -1,0 +1,182 @@
+.project-section {
+min-height: auto;
+color: white;
+display: flex;
+align-items: center;
+}
+
+.project-header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.project-card-container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Reduced from 280px */
+  gap: 15px; /* Reduced from 20px */
+  place-items: center;
+  background: linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.01),
+    rgba(255, 255, 255, 0).01
+  );
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(1.5px);
+  border-radius: 14px;
+  border: 0.1px solid rgba(255, 255, 255, 0.3);
+  padding: 24px 24px;
+  display: flex;
+  align-items: center;
+  box-shadow: 
+    0 8px 30px rgba(0, 0, 0, 0.15),
+    inset 0 2px 4px rgba(255, 255, 255, 0.2),
+    inset 0 -2px 4px rgba(0,0,0,0.2);
+}
+
+.project-card {
+  width: 100%;
+  max-width: 320px; /* Reduced from 400px */
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.05),
+    rgba(255, 255, 255, 0.03)
+  );
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 12px; /* Reduced from 16px */
+  transition: all 0.3s ease;
+}
+
+.project-image {
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 12px;
+}
+
+.project-category {
+  font-size: 0.9rem;
+  opacity: 70%;
+  margin-bottom: 4px;
+  display: block;
+}
+
+.project-title {
+  font-size: 1.2rem;
+  color: white;
+  margin-bottom: 12px;
+}
+
+.project-tech {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.tech-tag {
+  height: 15px;
+  width: 30px;
+  border-radius: 12px;
+  font-size: 8px;
+  background: linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.01),
+    rgba(255, 255, 255, 0).01
+);
+backdrop-filter: blur(20px);
+-webkit-backdrop-filter: blur(1.5px);
+border-radius: 14px;
+border: 0.1px solid rgba(255, 255, 255, 0.3);
+text-align: center;
+
+}
+
+/* Add navigation buttons if needed */
+.project-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+}
+
+.project-nav.prev {
+  left: -20px;
+}
+
+.project-nav.next {
+  right: -20px;
+}
+
+/* Existing Media Query (Tablet) */
+@media screen and (max-width: 768px) {
+  .project-card-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    padding: 15px;
+  }
+
+  .project-card {
+    max-width: 100%; /* Let grid handle width */
+  }
+}
+
+
+.project-card-container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* 1 row by default */
+  gap: 15px;
+  place-items: center;
+  background: linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.01),
+    rgba(255, 255, 255, 0).01
+  );
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(1.5px);
+  border-radius: 14px;
+  border: 0.1px solid rgba(255, 255, 255, 0.3);
+  padding: 24px 24px;
+  box-shadow: 
+    0 8px 30px rgba(0, 0, 0, 0.15),
+    inset 0 2px 4px rgba(255, 255, 255, 0.2),
+    inset 0 -2px 4px rgba(0,0,0,0.2);
+}
+
+
+@media screen and (max-width: 768px) {
+  .project-card-container {
+    grid-template-columns: repeat(2, 1fr); /* Always 2 columns on tablet/mobile */
+    gap: 12px;
+    padding: 12px;
+  }
+
+  .project-card {
+    max-width: 100%; /* Fill grid cell */
+  }
+
+  .project-title {
+    font-size: 1rem;
+  }
+
+  .project-category {
+    font-size: 0.8rem;
+  }
+
+  .tech-tag {
+    font-size: 7px;
+    width: auto;
+    padding: 2px 6px;
+  }
+}
